@@ -4,11 +4,11 @@ import Project from "./Project";
 import { data } from "../Data/data";
 
 const ProjectList = () => {
-  const [projects, setProjects] = useState(data);
+  const projects = useState(data)[0];
 
   const renderProjects = () => {
     return projects.map((project) => {
-      return <Project data={project} />;
+      return <Project key={project.id} data={project} />;
     });
   };
 

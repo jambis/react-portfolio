@@ -24,17 +24,17 @@ const Project = (props) => {
           </div>
           <div className="Project-links">
             <a
-              href={data.github}
+              href={`http://${data.demo}`}
               target="_blank"
-              rel="external noopener noreferrer"
+              rel="nofollow external noopener noreferrer"
               onClick={(e) => e.stopPropagation()}
             >
               Demo
             </a>
             <a
-              href="www.github.com/jambis"
+              href={`http://${data.github}`}
               target="_blank"
-              rel="nofollow noopener noreferrer"
+              rel="nofollow external noopener noreferrer"
               onClick={(e) => e.stopPropagation()}
             >
               Github
