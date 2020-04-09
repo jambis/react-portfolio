@@ -20,7 +20,7 @@ const Main = () => {
               href="https://github.com/jambis"
               title="James' Github"
               target="_blank"
-              rel="nofollow nooopener noreferr"
+              rel="noopener noreferrer nofollow"
             >
               <GitHubIcon />
             </a>
@@ -28,7 +28,7 @@ const Main = () => {
               href="https://www.linkedin.com/in/jambis/"
               title="James' Linkedin Profile"
               target="_blank"
-              rel="nofollow nooopener noreferr"
+              rel="noopener noreferrer nofollow"
             >
               <LinkedInIcon />
             </a>
@@ -36,7 +36,7 @@ const Main = () => {
               href="https://drive.google.com/file/d/1EBVJZTfDBGRvHPvxuMoc-YiMVJGuUFf1/view"
               title="James' Resume"
               target="_blank"
-              rel="nofollow nooopener noreferr"
+              rel="noopener noreferrer nofollow "
             >
               <DescriptionIcon />
             </a>
@@ -44,7 +44,7 @@ const Main = () => {
               href="mailto:jdbishop22@gmail.com"
               title="James' Email"
               target="_blank"
-              rel="nofollow nooopener noreferr"
+              rel="noopener noreferrer nofollow"
             >
               <EmailIcon />
             </a>
