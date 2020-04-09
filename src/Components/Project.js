@@ -6,8 +6,9 @@ import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
 import "../Styles/Project.scss";
 
-const Project = ({ data }) => {
+const Project = (props) => {
   const [expanded, setExpanded] = useState(false);
+  const { data } = props;
 
   return (
     <ExpansionPanel
@@ -22,10 +23,20 @@ const Project = ({ data }) => {
             <p>{data.tech}</p>
           </div>
           <div className="Project-links">
-            <a href="#test" onClick={(e) => e.stopPropagation()}>
+            <a
+              href={data.github}
+              target="_blank"
+              rel="external noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+            >
               Demo
             </a>
-            <a href="#test" onClick={(e) => e.stopPropagation()}>
+            <a
+              href="www.github.com/jambis"
+              target="_blank"
+              rel="nofollow noopener noreferrer"
+              onClick={(e) => e.stopPropagation()}
+            >
               Github
             </a>
           </div>
