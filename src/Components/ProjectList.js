@@ -12,7 +12,12 @@ const ProjectList = () => {
     });
   };
 
-  return <div>{renderProjects()}</div>;
+  return (
+    <div>
+      <h2 name="projects">Projects</h2>
+      {renderProjects()}
+    </div>
+  );
 };
 
 export default ProjectList;

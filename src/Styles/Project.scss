@@ -1,0 +1,27 @@
+.ShortDetails {
+  width: 100%;
+  text-align: left;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  & .Project-links {
+    width: 20%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+
+    & a {
+      text-decoration: none;
+      color: #3f51b5;
+      font-weight: 600;
+      padding: 0.5rem 0.5rem;
+      border-radius: 10%;
+
+      &:hover {
+        color: #fff;
+        background-color: #3f51b5;
+      }
+    }
+  }
+}
