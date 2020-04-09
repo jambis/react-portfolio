@@ -12,11 +12,17 @@
     }
   }
   & .Header-links {
+    display: flex;
+    justify-content: space-around;
+
     & a {
       text-decoration: none;
     }
+
     & svg {
-      fill: #333;
+      width: 2rem;
+      height: 2rem;
+      fill: #3f51b5;
     }
   }
 }

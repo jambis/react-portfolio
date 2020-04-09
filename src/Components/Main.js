@@ -13,8 +13,21 @@ const Main = () => {
     <>
       <div className="Header">
         <div className="Header-text">
-          <h2>Hey it's James Bishop</h2>
-          <p>This is a introduction of me</p>
+          <h2>
+            Hey it's James Bishop{" "}
+            <span role="img" aria-label="vulcan salute">
+              🖖
+            </span>
+          </h2>
+          <p>
+            I'm a full stack developer currently located in Mission, Texas in
+            the United States. I've recently graduated from Lambda School. Below
+            you can view a list of projects that I have taken apart of (made
+            during the coursework working in teams of students). You can find
+            more repos and details in my Github and LinkedIn profile. If you
+            have any questions for me feel free to reach out to me through
+            email.
+          </p>
           <div className="Header-links">
             <a
               href="https://github.com/jambis"
