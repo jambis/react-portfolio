@@ -29,5 +29,8 @@ nav {
         color: #444;
       }
     }
+    & svg {
+      cursor: pointer;
+    }
   }
 }
