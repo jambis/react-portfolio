@@ -19,7 +19,7 @@ const Header = () => {
   return (
     <nav>
       <div className="Nav-text">
-        <span role="logo" aria-label="technologist">
+        <span role="img" aria-label="technologist">
           👨‍💻
         </span>
         <p>Jambis.dev</p>
