@@ -11,4 +11,12 @@
       color: #555;
     }
   }
+  & .Header-links {
+    & a {
+      text-decoration: none;
+    }
+    & svg {
+      fill: #333;
+    }
+  }
 }
