@@ -1,6 +1,8 @@
 //Lightmode theme
 body {
   background-color: $bg-color;
+  transition: all 0.8s ease-in-out;
+
   & h1,
   h2,
   h3,
@@ -68,10 +70,16 @@ body.darkmode {
   }
   & div.MuiExpansionPanelSummary-root {
     background-color: $bg-color-darkmode;
+    transition-duration: 0.8s;
+    transition-property: background-color;
+    transition-timing-function: ease-in;
   }
 
   & div.MuiExpansionPanelDetails-root {
     background-color: $bg-color-darkmode;
+    transition-duration: 0.8s;
+    transition-property: background-color;
+    transition-timing-function: ease-in;
   }
 
   & .Nav-links a.active {
