@@ -1,0 +1,90 @@
+//Lightmode theme
+body {
+  background-color: $bg-color;
+  & h1,
+  h2,
+  h3,
+  h4 {
+    color: $header-text;
+  }
+
+  & p {
+    color: $normal-text;
+  }
+
+  & span {
+    color: $link-text;
+  }
+
+  & svg.MuiSvgIcon-root {
+    fill: $link-text;
+  }
+
+  & .Nav-links a.active {
+    text-decoration: underline;
+    text-decoration-color: $link-text;
+  }
+
+  & .Nav-links a {
+    color: $Grey-link;
+
+    &:hover {
+      color: $Grey-link-hover;
+      background-color: $Grey-bg-hover;
+    }
+  }
+
+  & a.links {
+    color: $link-text;
+
+    &:hover {
+      color: $white-text-hover;
+      background-color: $link-text;
+    }
+  }
+}
+
+//Darkmode theme
+body.darkmode {
+  background-color: $bg-color-darkmode;
+
+  & h1,
+  h2,
+  h3,
+  h4 {
+    color: $header-text-darkmode;
+  }
+
+  & p {
+    color: $normal-text-darkmode;
+  }
+
+  & span {
+    color: $link-text-darkmode;
+  }
+
+  & svg {
+    fill: $link-text-darkmode;
+  }
+  & div.MuiExpansionPanelSummary-root {
+    background-color: $bg-color-darkmode;
+  }
+
+  & div.MuiExpansionPanelDetails-root {
+    background-color: $bg-color-darkmode;
+  }
+
+  & .Nav-links a.active {
+    text-decoration: underline;
+    text-decoration-color: $link-text-darkmode;
+  }
+
+  & a.links {
+    color: $link-text-darkmode;
+
+    &:hover {
+      color: $white-text-hover;
+      background-color: $link-text-darkmode;
+    }
+  }
+}
