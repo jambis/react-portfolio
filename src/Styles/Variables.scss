@@ -1,6 +1,7 @@
 //Lightmode
 //Background Color
 $bg-color: whitesmoke;
+
 //General Text Colors
 $normal-text: #555;
 $header-text: #222;
@@ -15,13 +16,13 @@ $Grey-link-hover: #444;
 //Nightmode
 //Background Color
 $bg-color-darkmode: #222;
+
 //General Text Colors
 $normal-text-darkmode: #ddd;
 $header-text-darkmode: floralwhite;
 $link-text-darkmode: coral;
 $white-text-hover: #fff;
 
-//Nav Colors
-$Grey-link: #666;
-$Grey-bg-hover: #ddd;
-$Grey-link-hover: #444;
+//Fonts
+$font-text: "Roboto", sans-serif;
+$font-header: "Lato", sans-serif;
