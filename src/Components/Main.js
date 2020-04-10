@@ -6,19 +6,17 @@ import EmailIcon from "@material-ui/icons/Email";
 
 import ProjectList from "./ProjectList";
 
-import "../Styles/Main.scss";
-
 const Main = () => {
   return (
     <>
       <div className="Header">
         <div className="Header-text">
-          <h2>
+          <h1>
             Hey it's James Bishop{" "}
             <span role="img" aria-label="vulcan salute">
               🖖
             </span>
-          </h2>
+          </h1>
           <p>
             I'm a full stack developer currently located in Mission, Texas in
             the United States. I've recently graduated from Lambda School. Below
@@ -27,6 +25,17 @@ const Main = () => {
             more repos and details in my Github and LinkedIn profile. If you
             have any questions for me feel free to reach out to me through
             email.
+          </p>
+          <p>
+            Currently my skills are:&nbsp;
+            <span>
+              JavaScript, Python, ReactJS, Redux, NodeJS, ExpressJS, Django,
+              Flask, Redux, CSS/LESS/SASS, PostgreSQL/SQLite3.
+            </span>
+          </p>
+          <p>
+            Also I'm currently learning: <span>Docker</span> and&nbsp;
+            <span>GraphQL</span>
           </p>
           <div className="Header-links">
             <a

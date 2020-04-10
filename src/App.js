@@ -6,7 +6,7 @@ import Main from "./Components/Main";
 import AboutMe from "./Components/AboutMe";
 import Contact from "./Components/Contact";
 
-import "./Styles/App.scss";
+import "./Styles/Index.scss";
 
 function App() {
   return (

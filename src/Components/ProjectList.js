@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import Project from "./Project";
+
 import { data } from "../Data/data";
 
 const ProjectList = () => {
@@ -13,7 +14,7 @@ const ProjectList = () => {
   };
 
   return (
-    <div>
+    <div className="ProjectList">
       <h2 name="projects">Projects</h2>
       {renderProjects()}
     </div>

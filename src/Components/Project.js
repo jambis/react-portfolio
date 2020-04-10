@@ -4,8 +4,6 @@ import ExpansionPanelSummary from "@material-ui/core/ExpansionPanelSummary";
 import ExpansionPanelDetails from "@material-ui/core/ExpansionPanelDetails";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 
-import "../Styles/Project.scss";
-
 const Project = (props) => {
   const [expanded, setExpanded] = useState(false);
   const { data } = props;
@@ -19,7 +17,7 @@ const Project = (props) => {
       <ExpansionPanelSummary expandIcon={<ExpandMoreIcon />}>
         <div className="ShortDetails">
           <div>
-            <h2>{data.title}</h2>
+            <h3>{data.title}</h3>
             <p>{data.tech}</p>
           </div>
           <div className="Project-links">
@@ -28,6 +26,7 @@ const Project = (props) => {
               target="_blank"
               rel="nofollow external noopener noreferrer"
               onClick={(e) => e.stopPropagation()}
+              className="links"
             >
               Demo
             </a>
@@ -36,6 +35,7 @@ const Project = (props) => {
               target="_blank"
               rel="nofollow external noopener noreferrer"
               onClick={(e) => e.stopPropagation()}
+              className="links"
             >
               Github
             </a>
@@ -43,7 +43,7 @@ const Project = (props) => {
         </div>
       </ExpansionPanelSummary>
       <ExpansionPanelDetails>
-        <p>{data.description}</p>
+        <p className="Description">{data.description}</p>
       </ExpansionPanelDetails>
     </ExpansionPanel>
   );
