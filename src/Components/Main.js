@@ -12,7 +12,7 @@ const Main = () => {
       <div className="Header">
         <div className="Header-text">
           <h1>
-            Hey it's James Bishop{" "}
+            Greetings! I'm James{" "}
             <span role="img" aria-label="vulcan salute">
               🖖
             </span>
@@ -72,7 +72,7 @@ const Main = () => {
             </a>
           </div>
         </div>
-        <img src="https://via.placeholder.com/300x400" alt="James' Profile" />
+        <img src="Images/profilepic.jpg" alt="James' Profile" />
       </div>
       <ProjectList />
     </>

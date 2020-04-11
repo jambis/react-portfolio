@@ -8,6 +8,26 @@ const Project = (props) => {
   const [expanded, setExpanded] = useState(false);
   const { data } = props;
 
+  const renderImage = () => {
+    return <img src={data.image} alt={data.title} />;
+  };
+
+  const renderDescription = () => {
+    return data.description.map((paragraph) => {
+      return <p>{paragraph}</p>;
+    });
+  };
+
+  const renderLoginInfo = () => {
+    return (
+      <p>
+        You can try out the web appplication with the following username //
+        password:&nbsp;
+        <span>{data.login}</span>
+      </p>
+    );
+  };
+
   return (
     <ExpansionPanel
       square
@@ -18,7 +38,7 @@ const Project = (props) => {
         <div className="ShortDetails">
           <div>
             <h3>{data.title}</h3>
-            <p>{data.tech}</p>
+            <p>Tech: {data.tech}</p>
           </div>
           <div className="Project-links">
             <a
@@ -42,8 +62,10 @@ const Project = (props) => {
           </div>
         </div>
       </ExpansionPanelSummary>
-      <ExpansionPanelDetails>
-        <p className="Description">{data.description}</p>
+      <ExpansionPanelDetails className="Description">
+        {data.description ? renderDescription() : null}
+        {data.login ? renderLoginInfo() : null}
+        {data.image ? renderImage() : null}
       </ExpansionPanelDetails>
     </ExpansionPanel>
   );
