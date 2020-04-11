@@ -31,7 +31,7 @@ export const data = [
     description: [
       "A source-control cooking app built in React Native which allows users to quickly make and save a history of changes to their recipe.",
       "The application was created with the intent of having a way to digitalize the notes commonly found on the margin of your grandma's cooking notebook. A user is able to create and edit personal recipes, while also storing those recipes in their own digital cookbook that is organized by categories.",
-      "This was a built-on project built with React Native in the frontend and Node/Express backend where I collaborated with a remote team of 7 full stack developers over 8 weeks. I previously had no experience with the Expo cli and React Native, however was able to to quickly familiarize myself with the codebase and implement optimizations that reduced the amount of calls done to the backend, as well as squash some obscure bugs. While also polishing the codebase for future teams.",
+      "This was a built-on project built with React Native in the frontend and Node/Express backend where I collaborated with a remote team of 7 full stack developers over 8 weeks. I previously had no experience with the Expo CLI and React Native, however was able to to quickly familiarize myself with the codebase and implement optimizations that reduced the amount of calls done to the backend, as well as squash some obscure bugs. While also polishing the codebase for future teams.",
     ],
     github: "www.github.com/jambis/mydish-fe",
     demo: "play.google.com/store/apps/details?id=com.lambdaschool.mydish",
