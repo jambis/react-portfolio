@@ -12,7 +12,7 @@ const Main = () => {
       <div className="Header">
         <div className="Header-text">
           <h1>
-            Greetings! I'm James&nbsp;
+            Howdy! I'm James&nbsp;
             <span role="img" aria-label="vulcan salute">
               🖖
             </span>

@@ -41,10 +41,7 @@ const Header = () => {
         <NavLink to="/contact" activeClassName="active">
           Contact
         </NavLink>
-        <Brightness4RoundedIcon
-          onClick={handleClick}
-          style={{ color: darkBool ? "#3f51b5" : "#555" }}
-        />
+        <Brightness4RoundedIcon onClick={handleClick} />
       </div>
     </nav>
   );

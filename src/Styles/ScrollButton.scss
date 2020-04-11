@@ -4,9 +4,19 @@
   position: fixed;
   right: 1.5em;
   bottom: 1.5em;
+
+  @include phone {
+    right: 50%;
+    bottom: 2%;
+  }
 }
 
 svg.MuiSvgIcon-root.Arrow {
   width: 2em;
   height: 2em;
+
+  @include phone {
+    width: 1.3em;
+    height: 1.3em;
+  }
 }
