@@ -41,7 +41,7 @@ export const data = [
     title: "oneStep Maze",
     tech: "React, React Router, HTML Canvas, Django",
     description: [
-      "oneStep Maze is a project that was built in a week, on a team of 5 remote full stack web developers. Where I had to quickly learn Django over the weekend to implement a backend that could randomly generate a maze, and provide the frontend with the API to move a player through the rooms of the maze. Furthermore I also helped with the syncing of moving the character through the canvas with the backend.",
+      "oneStep Maze is a project that was built in a week, on a team of 5 remote full stack developers. Where I had to quickly learn Django over the weekend to implement a backend that could randomly generate a maze, and provide the frontend with the API to move a player through the rooms of the maze. Furthermore I also helped with the syncing of moving the character through the canvas with the backend.",
       "The frontend created with React and canvas to render the maze and knight (player), You can move with the wasd keys.",
     ],
     login: "demouser//pass12345",
