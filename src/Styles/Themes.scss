@@ -15,7 +15,7 @@ body {
   }
 
   & span {
-    color: $link-text;
+    color: $highligt-color;
   }
 
   & svg.MuiSvgIcon-root {
@@ -62,7 +62,7 @@ body.darkmode {
   }
 
   & span {
-    color: $link-text-darkmode;
+    color: $highligt-color;
   }
 
   & svg {
