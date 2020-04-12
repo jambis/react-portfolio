@@ -6,8 +6,8 @@ const AboutMe = () => {
   const aboutText = useState(about)[0];
 
   const renderAboutText = () => {
-    return aboutText.mainText?.map((p) => {
-      return <p>{p}</p>;
+    return aboutText.mainText?.map((p, i) => {
+      return <p key={i}>{p}</p>;
     });
   };
   return <>{renderAboutText()}</>;
