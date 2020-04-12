@@ -2,13 +2,13 @@ import React, { useState } from "react";
 
 import Project from "./Project";
 
-import { data } from "../Data/data";
+import { projects } from "../Data/projects";
 
 const ProjectList = () => {
-  const projects = useState(data)[0];
+  const projectsArr = useState(projects)[0];
 
   const renderProjects = () => {
-    return projects.map((project) => {
+    return projectsArr.map((project) => {
       return <Project key={project.id} data={project} />;
     });
   };
