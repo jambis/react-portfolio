@@ -1,0 +1,7 @@
+export const about = {
+  mainText: [
+    "Hello, I’m James Bishop, and I’m a full stack developer, currently living in Mission, Texas. My passion for tech started at an early age, when I received my first computer. Creating websites in HTML, Java applets and later on Adobe Flash (filled with terrible marquees and epilepsy inducing images). Everything hosted on the classic GeoCities and Angelfire. Later on, I would attend University to study Mechanical Engineering and received a B.S and M.S in Mechanical Engineer. My favorite classes were always the ones that involved using some sort of programming language or software, such as LabVIEW, MATLAB, 3D Modeling Software, etc.",
+    "As time went by, I always had this itch of becoming a software developer, and I would dabble on and off into learning different languages and tools. However, I later learned about Lambda School, and decided to take the amazing opportunity to have a structured program and resources to level up my skill in Software development. In April, 2020, I graduated with a whole new set skills and passion to code. I enjoy coding in JavaScript using React and NodeJS/Express. But I always enjoy learning new technologies.",
+    "Outside of coding, I enjoy playing video games, although I haven’t played that many recently. I’m also a gym rat and always looking for new variations of exercises or PPL workouts. I occasionally enjoy watching good UFC and boxing events.",
+  ],
+};
