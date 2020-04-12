@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import Brightness4RoundedIcon from "@material-ui/icons/Brightness4Rounded";
 
-//TODO: Custom darkmode hook
-
 const Header = () => {
   const initialState =
     localStorage.getItem("darkmode") === "true" ? true : false;
