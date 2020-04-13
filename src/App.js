@@ -7,6 +7,7 @@ import AboutMe from "./Components/AboutMe";
 import Contact from "./Components/Contact";
 import ScrollButton from "./Components/ScrollButton";
 import Blog from "./Components/Blog/Blog";
+import ViewPost from "./Components/Blog/ViewPost";
 
 import "./Styles/Index.scss";
 
@@ -35,7 +36,8 @@ function App() {
       <Route exact path="/" component={Main} />
       <Route path="/aboutme" component={AboutMe} />
       <Route path="/contact" component={Contact} />
-      <Route path="/blog" component={Blog} />
+      <Route exact path="/blog" component={Blog} />
+      <Route path="/blog/:slug" component={ViewPost} />
       {show ? <ScrollButton /> : null}
     </div>
   );
