@@ -13,10 +13,10 @@ export const projects = [
   {
     id: 2,
     title: "NBA Career Longevity Predictor Front End",
-    tech: "React, Redux, React Router<p></p>, axios, Material UI",
+    tech: "React, Redux, React Router, axios, Material UI",
     description: [
       "NBA contracts are sometimes 9 figures long. It is in a team's best interest to have a good idea of the longevity of a player's productivity. This application uses historical data to find similar players and predict a selected player's likely longevity in the league.",
-      "The appplication will allow you select a player from a list of current and past players. The machine learning models will predict the selected player expected longetivity in the NBA league, as well as return a player that is the most similar to the player picked. You're also able to save a player to your personal list for quick reference and edit their name.",
+      "The application will allow you select a player from a list of current and past players. The machine learning models will predict the selected player expected longevity in the NBA league, as well as return a player that is the most similar to the player picked. You're also able to save a player to your personal list for quick reference and edit their name.",
       "My role in this project was to implement, design and lead the frontend that would communicate with the backend and machine learning models. I also delegated tasks to two other junior frontend developers. This project was during a build week, in a remote team of 8 students.",
     ],
     login: "jd//jd",
