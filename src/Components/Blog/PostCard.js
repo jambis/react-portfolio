@@ -8,7 +8,7 @@ const PostCard = ({ data }) => {
       <p>Date - {data.date}</p>
       <Link
         to={{
-          pathname: data.slug,
+          pathname: `blog/${data.slug}`,
           state: { data: data },
         }}
       >
