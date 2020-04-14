@@ -8,6 +8,8 @@ import Contact from "./Components/Contact";
 import ScrollButton from "./Components/ScrollButton";
 import Blog from "./Components/Blog/Blog";
 import ViewPost from "./Components/Blog/ViewPost";
+import Admin from "./Components/Blog/Admin";
+import CreatePost from "./Components/Blog/CreatePost";
 
 import "./Styles/Index.scss";
 
@@ -30,6 +32,7 @@ function App() {
     }
   };
 
+  //PrivateRoute for Admin
   return (
     <div className="App">
       <Header />
@@ -38,6 +41,8 @@ function App() {
       <Route path="/contact" component={Contact} />
       <Route exact path="/blog" component={Blog} />
       <Route path="/blog/:slug" component={ViewPost} />
+      <Route exact path="/admin" component={Admin} />
+      <Route path="/admin/createpost" component={CreatePost} />
       {show ? <ScrollButton /> : null}
     </div>
   );
