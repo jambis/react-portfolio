@@ -10,6 +10,7 @@ const AboutMe = () => {
       return <p key={i}>{p}</p>;
     });
   };
+
   return <>{renderAboutText()}</>;
 };
 
