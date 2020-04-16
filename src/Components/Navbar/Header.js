@@ -2,6 +2,8 @@ import React, { useState, useEffect } from "react";
 import { NavLink } from "react-router-dom";
 import Brightness4RoundedIcon from "@material-ui/icons/Brightness4Rounded";
 
+import HamburgerMenu from "./HamburgerMenu";
+
 const Header = () => {
   const initialState =
     localStorage.getItem("darkmode") === "true" ? true : false;
@@ -41,6 +43,7 @@ const Header = () => {
         </NavLink>
         <Brightness4RoundedIcon onClick={handleClick} />
       </div>
+      <HamburgerMenu />
     </nav>
   );
 };

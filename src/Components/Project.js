@@ -13,8 +13,8 @@ const Project = (props) => {
   };
 
   const renderDescription = () => {
-    return data.description.map((paragraph) => {
-      return <p>{paragraph}</p>;
+    return data.description.map((paragraph, i) => {
+      return <p key={i}>{paragraph}</p>;
     });
   };
 

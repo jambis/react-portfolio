@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { Route } from "react-router-dom";
 
-import Header from "./Components/Header";
+import Header from "./Components/Navbar/Header";
+
 import Main from "./Components/Main";
 import AboutMe from "./Components/AboutMe";
 import Contact from "./Components/Contact";
 import ScrollButton from "./Components/ScrollButton";
+
 import Blog from "./Components/Blog/Blog";
 import ViewPost from "./Components/Blog/ViewPost";
 import Admin from "./Components/Blog/Admin";

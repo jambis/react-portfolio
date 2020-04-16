@@ -30,7 +30,8 @@ const Main = () => {
             Currently my skills are:&nbsp;
             <span>
               JavaScript, Python, ReactJS, Redux, NodeJS, ExpressJS, Django,
-              Flask, Redux, CSS/LESS/SASS, PostgreSQL/SQLite3.
+              Flask, Redux, CSS/LESS/SASS, PostgreSQL/SQLite3, Git version
+              control.
             </span>
           </p>
           <p>
