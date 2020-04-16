@@ -41,10 +41,6 @@ function App() {
       <Route exact path="/" component={Main} />
       <Route path="/aboutme" component={AboutMe} />
       <Route path="/contact" component={Contact} />
-      <Route exact path="/blog" component={Blog} />
-      <Route path="/blog/:slug" component={ViewPost} />
-      <Route exact path="/admin" component={Admin} />
-      <Route path="/admin/createpost" component={CreatePost} />
       {show ? <ScrollButton /> : null}
     </div>
   );
