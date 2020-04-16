@@ -8,11 +8,6 @@ import AboutMe from "./Components/AboutMe";
 import Contact from "./Components/Contact";
 import ScrollButton from "./Components/ScrollButton";
 
-import Blog from "./Components/Blog/Blog";
-import ViewPost from "./Components/Blog/ViewPost";
-import Admin from "./Components/Blog/Admin";
-import CreatePost from "./Components/Blog/CreatePost";
-
 import "./Styles/Index.scss";
 
 function App() {
