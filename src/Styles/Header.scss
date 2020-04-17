@@ -4,11 +4,12 @@ nav {
   justify-content: space-around;
   margin: 5% auto;
 
-  & .Nav-text {
+  & .Nav-text a {
     width: 40%;
     margin-left: 5%;
     display: flex;
     align-items: center;
+    text-decoration: none;
 
     & span {
       font-size: 1.5rem;
@@ -17,6 +18,7 @@ nav {
 
     & h2 {
       font-size: 1.5rem;
+      margin-bottom: 0;
     }
   }
 
@@ -25,10 +27,17 @@ nav {
     margin-right: 5%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 
     & a {
       font-size: 1.5rem;
       text-decoration: none;
+      display: flex;
+      align-items: center;
+
+      & svg {
+        margin-right: 0.2em;
+      }
     }
     & svg {
       cursor: pointer;
