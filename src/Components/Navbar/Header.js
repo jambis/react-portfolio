@@ -1,28 +1,16 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { NavLink } from "react-router-dom";
-import Brightness4RoundedIcon from "@material-ui/icons/Brightness4Rounded";
+import HomeRoundedIcon from "@material-ui/icons/HomeRounded";
+import ArrowDropDownRoundedIcon from "@material-ui/icons/ArrowDropDownRounded";
+import PersonPinRoundedIcon from "@material-ui/icons/PersonPinRounded";
+import EmojiPeopleRoundedIcon from "@material-ui/icons/EmojiPeopleRounded";
+import DeveloperBoardRoundedIcon from "@material-ui/icons/DeveloperBoardRounded";
+import ContactMailRoundedIcon from "@material-ui/icons/ContactMailRounded";
 
+import Darkmode from "./Darkmode";
 import HamburgerMenu from "./HamburgerMenu";
 
 const Header = () => {
-  const initialState =
-    localStorage.getItem("darkmode") === "true" ? true : false;
-
-  const [darkBool, setDarkBool] = useState(initialState);
-
-  useEffect(() => {
-    if (darkBool) {
-      document.body.classList.add("darkmode");
-    } else {
-      document.body.classList.remove("darkmode");
-    }
-  }, [darkBool]);
-
-  const handleClick = () => {
-    setDarkBool((state) => !state);
-    localStorage.setItem("darkmode", !darkBool ? "true" : "false");
-  };
-
   return (
     <nav>
       <div className="Nav-text">
@@ -41,7 +29,7 @@ const Header = () => {
         <NavLink to="/contact" activeClassName="active">
           Contact
         </NavLink>
-        <Brightness4RoundedIcon onClick={handleClick} />
+        <Darkmode />
       </div>
       <HamburgerMenu />
     </nav>
