@@ -3,11 +3,9 @@ import { animated } from "react-spring";
 import { NavLink } from "react-router-dom";
 import CloseIcon from "@material-ui/icons/Close";
 import HomeRoundedIcon from "@material-ui/icons/HomeRounded";
-import ArrowDropDownRoundedIcon from "@material-ui/icons/ArrowDropDownRounded";
-import PersonPinRoundedIcon from "@material-ui/icons/PersonPinRounded";
 import EmojiPeopleRoundedIcon from "@material-ui/icons/EmojiPeopleRounded";
 import DeveloperBoardRoundedIcon from "@material-ui/icons/DeveloperBoardRounded";
-import PermPhoneMsgRoundedIcon from "@material-ui/icons/PermPhoneMsgRounded";
+import WorkRoundedIcon from "@material-ui/icons/WorkRounded";
 
 import Darkmode from "./Darkmode";
 
@@ -39,12 +37,12 @@ const Drawer = ({ setShow, transition }) => {
         </div>
         <div className="Drawer-link-item">
           <NavLink
-            to="/contact"
+            to="/projects"
             activeClassName="active"
             onClick={() => setShow((state) => !state)}
           >
-            <PermPhoneMsgRoundedIcon />
-            Contact
+            <WorkRoundedIcon />
+            Projects
           </NavLink>
         </div>
         <Darkmode />
