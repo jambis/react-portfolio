@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { Route } from "react-router-dom";
 
-import Header from "./Components/Header";
+import Header from "./Components/Navbar/Header";
 import Main from "./Components/Main";
 import AboutMe from "./Components/AboutMe";
-import Contact from "./Components/Contact";
+import ProjectList from "./Components/ProjectList";
 import ScrollButton from "./Components/ScrollButton";
 
 import "./Styles/Index.scss";
@@ -28,12 +28,13 @@ function App() {
     }
   };
 
+  //PrivateRoute for Admin
   return (
     <div className="App">
       <Header />
       <Route exact path="/" component={Main} />
       <Route path="/aboutme" component={AboutMe} />
-      <Route path="/contact" component={Contact} />
+      <Route path="/projects" component={ProjectList} />
       {show ? <ScrollButton /> : null}
     </div>
   );

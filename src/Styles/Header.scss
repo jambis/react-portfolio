@@ -1,20 +1,24 @@
 nav {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: space-around;
   margin: 5% auto;
 
-  & .Nav-text {
+  & .Nav-text a {
     width: 40%;
     margin-left: 5%;
     display: flex;
-    align-items: baseline;
+    align-items: center;
+    text-decoration: none;
+
     & span {
       font-size: 1.5rem;
       margin-right: 1rem;
     }
+
     & h2 {
       font-size: 1.5rem;
+      margin-bottom: 0;
     }
   }
 
@@ -23,12 +27,48 @@ nav {
     margin-right: 5%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+
     & a {
       font-size: 1.5rem;
       text-decoration: none;
+      display: flex;
+      align-items: center;
+
+      & svg {
+        margin-right: 0.2em;
+      }
     }
     & svg {
       cursor: pointer;
     }
+
+    @include phone {
+      display: none;
+    }
+  }
+
+  & .HamburgerMenu {
+    display: none;
+
+    & svg.HamburgerBtn {
+      display: none;
+      width: 2em;
+      height: 2em;
+      margin: 0;
+
+      @include phone {
+        display: block;
+      }
+    }
+
+    @include phone {
+      display: block;
+      margin-right: 5%;
+    }
+  }
+
+  @include phone {
+    justify-content: space-between;
   }
 }

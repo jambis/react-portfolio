@@ -28,34 +28,6 @@
     }
   }
 
-  & .Header-links {
-    display: flex;
-    justify-content: space-around;
-
-    & a {
-      text-decoration: none;
-    }
-
-    & svg {
-      width: 3rem;
-      height: 3rem;
-      transition: transform 0.3s ease-in-out;
-
-      @include phone {
-        width: 2.4rem;
-        height: 2.4rem;
-      }
-
-      &:hover {
-        transform: scale(1.3);
-
-        @include phone {
-          transform: scale(1.1);
-        }
-      }
-    }
-  }
-
   & img {
     margin: auto auto;
     margin-right: 5%;
@@ -64,6 +36,35 @@
 
     @include tablet {
       display: none;
+    }
+  }
+}
+
+.Header-links {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 7%;
+
+  & a {
+    text-decoration: none;
+  }
+
+  & svg {
+    width: 3rem;
+    height: 3rem;
+    transition: transform 0.3s ease-in-out;
+
+    @include phone {
+      width: 2.4rem;
+      height: 2.4rem;
+    }
+
+    &:hover {
+      transform: scale(1.3);
+
+      @include phone {
+        transform: scale(1.1);
+      }
     }
   }
 }

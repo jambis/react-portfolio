@@ -44,8 +44,42 @@ body {
       background-color: $link-text;
     }
   }
-}
 
+  & .DrawerMenu {
+    background: $bg-color-darkmode;
+
+    & svg {
+      fill: $link-text-darkmode;
+    }
+
+    & .Drawer-links a.active {
+      text-decoration: underline;
+      text-decoration-color: $link-text-darkmode;
+    }
+
+    & .Drawer-links > .Drawer-link-item {
+      & a {
+        color: $Grey-link;
+
+        &:hover {
+          color: $Grey-link-hover;
+          background-color: $Grey-bg-hover;
+        }
+      }
+    }
+
+    & .Darkmode-container {
+      & .link-text {
+        color: $Grey-link;
+      }
+
+      &:hover {
+        color: $Grey-link-hover;
+        background-color: $Grey-bg-hover;
+      }
+    }
+  }
+}
 //Darkmode theme
 body.darkmode {
   background-color: $bg-color-darkmode;
@@ -93,6 +127,39 @@ body.darkmode {
     &:hover {
       color: $white-text-hover;
       background-color: $link-text-darkmode;
+    }
+  }
+
+  & .DrawerMenu {
+    background: $bg-color;
+
+    & svg {
+      fill: $link-text;
+    }
+
+    & .Drawer-links a.active {
+      text-decoration: underline;
+      text-decoration-color: $link-text;
+    }
+
+    & .Drawer-links > .Drawer-link-item > a {
+      color: $Grey-link;
+
+      &:hover {
+        color: $Grey-link-hover;
+        background-color: $Grey-bg-hover;
+      }
+    }
+
+    & .Darkmode-container {
+      & .link-text {
+        color: $Grey-link;
+      }
+
+      &:hover {
+        color: $Grey-link-hover;
+        background-color: $Grey-bg-hover;
+      }
     }
   }
 }
