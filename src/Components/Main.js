@@ -19,11 +19,11 @@ const Main = () => {
           </h1>
           <p>
             I'm a full stack developer currently located in Mission, Texas. I've
-            recently graduated from Lambda School. Below you can view a list of
-            projects that I have taken part of (made during the coursework
-            working in teams of students). You can find more repos and details
-            in my Github and LinkedIn profile. If you have any questions for me
-            feel free to reach out to me through email.
+            recently graduated from Lambda School. Navigate to Projects to find
+            a list of projects that I have taken part of (made during the
+            coursework working in teams of students). You can find more repos
+            and details in my Github and LinkedIn profile. If you have any
+            questions for me feel free to reach out to me through email.
           </p>
           <p>
             Currently my skills are:&nbsp;
@@ -74,7 +74,6 @@ const Main = () => {
           <EmailIcon />
         </a>
       </div>
-      <ProjectList />
     </>
   );
 };
