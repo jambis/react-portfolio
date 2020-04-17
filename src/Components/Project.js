@@ -23,7 +23,7 @@ const Project = (props) => {
   const renderLoginInfo = () => {
     return (
       <p>
-        You can try out the web appplication with the following username //
+        You can try out the web application with the following username //
         password:&nbsp;
         <span>{data.login}</span>
       </p>

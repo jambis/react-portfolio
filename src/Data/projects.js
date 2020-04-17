@@ -16,7 +16,7 @@ export const projects = [
     tech: "React, Redux, React Router, axios, Material UI",
     description: [
       "NBA contracts are sometimes 9 figures long. It is in a team's best interest to have a good idea of the longevity of a player's productivity. This application uses historical data to find similar players and predict a selected player's likely longevity in the league.",
-      "The application will allow you select a player from a list of current and past players. The machine learning models will predict the selected player expected longevity in the NBA league, as well as return a player that is the most similar to the player picked. You're also able to save a player to your personal list for quick reference and edit their name.",
+      "The application will allow you select a player from a list of current and past players. The machine learning models will predict the selected player expected longevity in the NBA league, as well as return a player that is the most similar to the player picked. Users are also able to save a player to their personal list for quick reference and edit their name.",
       "My role in this project was to implement, design and lead the frontend that would communicate with the backend and machine learning models. I also delegated tasks to two other junior frontend developers. This project was during a build week, in a remote team of 8 students.",
     ],
     login: "jd//jd",
@@ -48,8 +48,8 @@ export const projects = [
     title: "oneStep Maze",
     tech: "React, React Router, HTML Canvas, Django",
     description: [
-      "oneStep Maze is a project that was built in a week, on a team of 5 remote full stack developers. Where I had to quickly learn Django over the weekend to implement a backend that could randomly generate a maze, and provide the frontend with the API to move a player through the rooms of the maze. Furthermore I also helped with the syncing of moving the character through the canvas with the backend.",
-      "The frontend created with React and canvas to render the maze and knight (player), You can move with the wasd keys.",
+      "oneStep Maze is a project that was built in a week, on a team of 5 remote full stack developers where I had to quickly learn Django over the weekend to implement a backend that could randomly generate a maze, and provide the frontend with the API to move a player through the rooms of the maze. Furthermore I also helped with the syncing of moving the character through the canvas with the backend.",
+      "The frontend created with React and canvas to render the maze and knight (player), You can move with the WASD keys.",
     ],
     login: "demouser//pass12345",
     github: "www.github.com/Trying-our-best",
