@@ -9,7 +9,9 @@ const Project = (props) => {
   const { data } = props;
 
   const renderImage = () => {
-    return <img src={data.image} alt={data.title} />;
+    return data.image.map((img, i) => (
+      <img width={data.maxWidth[i]} key={i} src={img} alt={data.title} />
+    ));
   };
 
   const renderDescription = () => {
@@ -65,7 +67,9 @@ const Project = (props) => {
       <ExpansionPanelDetails className="Description">
         {data.description ? renderDescription() : null}
         {data.login ? renderLoginInfo() : null}
-        {data.image ? renderImage() : null}
+        <div className="Project-images">
+          {data.image ? renderImage() : null}
+        </div>
       </ExpansionPanelDetails>
     </ExpansionPanel>
   );

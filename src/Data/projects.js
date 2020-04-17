@@ -22,7 +22,8 @@ export const projects = [
     login: "jd//jd",
     github: "www.github.com/Build-NBA-Career-Longevity-Predictor/front-end",
     demo: "nba-clp.netlify.com",
-    image: "/Images/react-nba.jpg",
+    image: ["/Images/react-nba.jpg"],
+    maxWidth: [800],
   },
   {
     id: 3,
@@ -35,6 +36,12 @@ export const projects = [
     ],
     github: "www.github.com/jambis/mydish-fe",
     demo: "play.google.com/store/apps/details?id=com.lambdaschool.mydish",
+    image: [
+      "/Images/mydish1.jpg",
+      "/Images/mydish2.jpg",
+      "/Images/mydish3.jpg",
+    ],
+    maxWidth: [300, 300, 300],
   },
   {
     id: 4,
@@ -46,7 +53,8 @@ export const projects = [
     ],
     login: "demouser//pass12345",
     github: "www.github.com/Trying-our-best",
-    image: "/Images/onemaze.jpg",
+    image: ["/Images/onemaze.jpg"],
+    maxWidth: [800],
     demo: "cs-bw1-tob.netlify.com/",
   },
 ];

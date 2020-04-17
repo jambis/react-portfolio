@@ -75,12 +75,12 @@
       font-size: 1rem;
     }
   }
+  .Project-images {
+    display: flex;
+  }
 
   & img {
     margin: 2% auto;
-    width: 60em;
-    height: auto;
-    max-width: 800px;
 
     @include tablet {
       display: none;
