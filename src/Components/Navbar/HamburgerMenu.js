@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { useTransition } from "react-spring";
 import MenuIcon from "@material-ui/icons/Menu";
-import Slider from "./Slider";
+
+import Drawer from "./Drawer";
 
 const HamburgerMenu = () => {
   const [show, setShow] = useState(false);
@@ -12,10 +13,10 @@ const HamburgerMenu = () => {
     leave: { right: "-70vw" },
   });
 
-  const renderSlider = () => {
+  const renderDrawer = () => {
     return transitions.map(
       ({ item, key, props }) =>
-        item && <Slider key={key} setShow={setShow} transition={props} />
+        item && <Drawer key={key} setShow={setShow} transition={props} />
     );
   };
   return (
@@ -24,7 +25,7 @@ const HamburgerMenu = () => {
         className="HamburgerBtn"
         onClick={() => setShow((state) => !state)}
       />
-      {renderSlider()}
+      {renderDrawer()}
     </div>
   );
 };
