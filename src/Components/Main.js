@@ -38,42 +38,42 @@ const Main = () => {
             Also I'm currently learning: <span>Docker</span> and&nbsp;
             <span>GraphQL</span>
           </p>
-          <div className="Header-links">
-            <a
-              href="https://github.com/jambis"
-              title="James' Github"
-              target="_blank"
-              rel="noopener noreferrer nofollow"
-            >
-              <GitHubIcon />
-            </a>
-            <a
-              href="https://www.linkedin.com/in/jambis/"
-              title="James' Linkedin Profile"
-              target="_blank"
-              rel="noopener noreferrer nofollow"
-            >
-              <LinkedInIcon />
-            </a>
-            <a
-              href="https://drive.google.com/file/d/1EBVJZTfDBGRvHPvxuMoc-YiMVJGuUFf1/view"
-              title="James' Resume"
-              target="_blank"
-              rel="noopener noreferrer nofollow "
-            >
-              <DescriptionIcon />
-            </a>
-            <a
-              href="mailto:jdbishop22@gmail.com"
-              title="James' Email"
-              target="_blank"
-              rel="noopener noreferrer nofollow"
-            >
-              <EmailIcon />
-            </a>
-          </div>
         </div>
         <img src="Images/profilepic.jpg" alt="James' Profile" />
+      </div>
+      <div className="Header-links">
+        <a
+          href="https://github.com/jambis"
+          title="James' Github"
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+        >
+          <GitHubIcon />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/jambis/"
+          title="James' Linkedin Profile"
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+        >
+          <LinkedInIcon />
+        </a>
+        <a
+          href="https://drive.google.com/file/d/1EBVJZTfDBGRvHPvxuMoc-YiMVJGuUFf1/view"
+          title="James' Resume"
+          target="_blank"
+          rel="noopener noreferrer nofollow "
+        >
+          <DescriptionIcon />
+        </a>
+        <a
+          href="mailto:jdbishop22@gmail.com"
+          title="James' Email"
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+        >
+          <EmailIcon />
+        </a>
       </div>
       <ProjectList />
     </>
