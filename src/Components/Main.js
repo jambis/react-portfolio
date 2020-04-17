@@ -4,8 +4,6 @@ import LinkedInIcon from "@material-ui/icons/LinkedIn";
 import DescriptionIcon from "@material-ui/icons/Description";
 import EmailIcon from "@material-ui/icons/Email";
 
-import ProjectList from "./ProjectList";
-
 const Main = () => {
   return (
     <>
