@@ -1,12 +1,15 @@
 import React from "react";
+import { animated } from "react-spring";
 import ArrowDropDownCircleRoundedIcon from "@material-ui/icons/ArrowDropDownCircleRounded";
 
-const ScrollButton = () => {
+const ScrollButton = ({ transition }) => {
   return (
-    <ArrowDropDownCircleRoundedIcon
-      className="Arrow"
-      onClick={() => window.scrollTo(0, 0)}
-    />
+    <animated.div className="ScrollBtn-Container" style={transition}>
+      <ArrowDropDownCircleRoundedIcon
+        className="Arrow"
+        onClick={() => window.scrollTo(0, 0)}
+      />
+    </animated.div>
   );
 };
 
