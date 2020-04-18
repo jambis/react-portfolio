@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Route } from "react-router-dom";
+import { useTransition } from "react-spring";
 
 import Header from "./Components/Navbar/Header";
 import Main from "./Components/Main";
@@ -20,6 +21,12 @@ function App() {
     };
   }, []);
 
+  const transitions = useTransition(show, null, {
+    from: { opacity: 0, bottom: "0em" },
+    enter: { opacity: 1, bottom: "2.3em" },
+    leave: { opacity: 0, bottom: "0em" },
+  });
+
   const handleOnScroll = () => {
     if (window.scrollY > 100) {
       setShow(true);
@@ -28,14 +35,20 @@ function App() {
     }
   };
 
-  //PrivateRoute for Admin
+  const renderScrollBtn = () => {
+    return transitions.map(
+      ({ item, key, props }) =>
+        item && <ScrollButton key={key} setShow={setShow} transition={props} />
+    );
+  };
+
   return (
     <div className="App">
       <Header />
       <Route exact path="/" component={Main} />
       <Route path="/aboutme" component={AboutMe} />
       <Route path="/projects" component={ProjectList} />
-      {show ? <ScrollButton /> : null}
+      {renderScrollBtn()}
     </div>
   );
 }

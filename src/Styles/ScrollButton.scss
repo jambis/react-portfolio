@@ -1,22 +1,24 @@
-.Arrow {
+.ScrollBtn-Container {
   cursor: pointer;
-  transform: rotate(180deg);
   position: fixed;
   right: 1.5em;
-  bottom: 1.5em;
+  bottom: 2.3em;
 
-  @include phone {
-    right: 50%;
-    bottom: 2%;
+  .Arrow {
+    transform: rotate(180deg);
   }
-}
 
-svg.MuiSvgIcon-root.Arrow {
-  width: 2em;
-  height: 2em;
+  svg.MuiSvgIcon-root.Arrow {
+    width: 2em;
+    height: 2em;
+
+    @include phone {
+      width: 1.3em;
+      height: 1.3em;
+    }
+  }
 
   @include phone {
-    width: 1.3em;
-    height: 1.3em;
+    right: 47.5%;
   }
 }
