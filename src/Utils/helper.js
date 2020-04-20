@@ -2,6 +2,4 @@ export const convertDate = (date) => {
   return null;
 };
 
-export const collectIdsAndDocs = (doc) => {
-  return { id: doc.id, ...doc.data() };
-};
+export const collectIdsAndData = (doc) => ({ id: doc.id, ...doc.data() });
