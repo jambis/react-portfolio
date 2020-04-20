@@ -11,6 +11,8 @@ import Blog from "./Components/Blog/Blog";
 import ViewPost from "./Components/Blog/ViewPost";
 import Admin from "./Components/Blog/Admin";
 import CreatePost from "./Components/Blog/CreatePost";
+import Login from "./Components/Blog/Login";
+import PrivateRoute from "./Components/PrivateRoute";
 
 import "./Styles/Index.scss";
 
@@ -54,8 +56,9 @@ function App() {
       <Route path="/projects" component={ProjectList} />
       <Route exact path="/blog" component={Blog} />
       <Route path="/blog/:slug" component={ViewPost} />
-      <Route exact path="/admin" component={Admin} />
-      <Route path="/admin/createpost" component={CreatePost} />
+      <Route path="/login" component={Login} />
+      <PrivateRoute exact path="/admin" component={Admin} />
+      <PrivateRoute path="/admin/createpost" component={CreatePost} />
       {renderScrollBtn()}
     </div>
   );
