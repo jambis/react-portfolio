@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { firestore } from "../../Utils/firebase";
-import { collectIdsAndDocs } from "../../Utils/helper";
 
 const CreatePost = (props) => {
   const [blogPost, setBlogPost] = useState({
@@ -23,27 +22,18 @@ const CreatePost = (props) => {
       content: blogPost.content,
     };
 
-    const docRef = await firestore.collection("posts").add(newPost);
-    const doc = await docRef.get();
-
-    newPost = collectIdsAndDocs(doc);
+    await firestore.collection("posts").add(newPost);
   };
 
-  //   const saveAsDraft = () => {
-  //     // const date = generateDate();
-  //     const newPost = {
-  //       title: blogPost.title,
-  //       date: blogPost.date,
-  //       slug: blogPost.slug,
-  //       content: blogPost.content,
-  //     };
-  //     getFirebase()
-  //       .database()
-  //       .ref()
-  //       .child(`drafts/${blogPost.slug}`)
-  //       .set(newPost)
-  //       .then(() => props.history.push("/admin"));
-  //   };
+  const saveAsDraft = async () => {
+    const newPost = {
+      title: blogPost.title,
+      slug: blogPost.slug,
+      content: blogPost.content,
+    };
+
+    await firestore.collection("posts").add(newPost);
+  };
 
   return (
     <div>

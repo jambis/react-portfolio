@@ -1,34 +1,13 @@
-import React, { useState, useEffect } from "react";
-
-import { firestore } from "../../Utils/firebase";
-import { collectIdsAndDocs } from "../../Utils/helper";
+import React, { useContext } from "react";
 
 import PostCard from "./PostCard";
+import { PostsContext } from "../../Providers/PostsProvider";
 
 const Blog = () => {
-  const [blogPosts, setBlogPosts] = useState([]);
-
-  let unsubscribe = null;
-
-  console.log(blogPosts);
-  useEffect(() => {
-    getBlogPosts();
-
-    return () => {
-      console.log("unsubscribing");
-      unsubscribe();
-    };
-  }, []);
-
-  const getBlogPosts = async () => {
-    unsubscribe = firestore.collection("posts").onSnapshot((snapshot) => {
-      const posts = snapshot.docs.map(collectIdsAndDocs);
-      setBlogPosts(posts);
-    });
-  };
+  const { posts } = useContext(PostsContext);
 
   const renderPostCards = () => {
-    return blogPosts.map((blog) => {
+    return posts.map((blog) => {
       return <PostCard key={blog.id} data={blog} />;
     });
   };
