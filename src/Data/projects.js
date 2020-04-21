@@ -9,6 +9,8 @@ export const projects = [
     ],
     github: "www.github.com/Build-Vacation-Planner/Back-End",
     demo: "vacation-planner-be.herokuapp.com/docs/",
+    image: ["/Images/vp-backend.jpg"],
+    maxWidth: [800],
   },
   {
     id: 2,
