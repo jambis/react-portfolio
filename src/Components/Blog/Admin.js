@@ -1,7 +1,9 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 
-import PostCard from "./PostCard";
+import List from "@material-ui/core/List";
+
+import AdminPost from "./AdminPost";
 import { PostsContext } from "../../Providers/PostsProvider";
 
 const Admin = () => {
@@ -9,16 +11,18 @@ const Admin = () => {
 
   const renderPosts = (article) => {
     return article.map((post) => {
-      return <PostCard key={post.id} data={post} />;
+      return <AdminPost key={post.id} data={post} />;
     });
   };
 
   return (
-    <div>
-      {renderPosts(posts)}
-      {renderPosts(drafts)}
+    <>
+      <List>
+        {renderPosts(posts)}
+        {renderPosts(drafts)}
+      </List>
       <Link to="/admin/createpost">Create a new blog post</Link>
-    </div>
+    </>
   );
 };
 
