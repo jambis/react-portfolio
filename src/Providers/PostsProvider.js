@@ -1,23 +1,26 @@
-import React, { useState, useEffect, createContext, useContext } from "react";
+import React, { useEffect, createContext, useContext, useReducer } from "react";
 import { firestore } from "../Utils/firebase";
-import { collectIdsAndData } from "../Utils/helper";
+import {
+  collectIdsAndDataPosts,
+  collectIdsAndDataDrafts,
+} from "../Utils/helper";
 import { UsersContext } from "./UsersProvider";
+import { PostsReducer } from "./PostsReducer";
 
-export const PostsContext = createContext();
+export const PostsContextState = createContext();
+export const PostsContextDispatch = createContext();
 
 const PostsProvider = ({ children }) => {
   const user = useContext(UsersContext);
-
-  const [posts, setPosts] = useState([]);
-  const [drafts, setDrafts] = useState([]);
+  const [state, dispatch] = useReducer(PostsReducer, { posts: [], drafts: [] });
 
   let unsubscribePosts = null;
   let unsubscribeDrafts = null;
 
   const getPosts = () => {
     unsubscribePosts = firestore.collection("posts").onSnapshot((snapshot) => {
-      const snapshotPosts = snapshot.docs.map(collectIdsAndData);
-      setPosts(snapshotPosts);
+      const snapshotPosts = snapshot.docs.map(collectIdsAndDataPosts);
+      dispatch({ type: "REFRESH_POSTS", payload: snapshotPosts });
     });
   };
 
@@ -25,8 +28,8 @@ const PostsProvider = ({ children }) => {
     unsubscribeDrafts = firestore
       .collection("drafts")
       .onSnapshot((snapshot) => {
-        const snapshotPosts = snapshot.docs.map(collectIdsAndData);
-        setDrafts(snapshotPosts);
+        const snapshotPosts = snapshot.docs.map(collectIdsAndDataDrafts);
+        dispatch({ type: "REFRESH_DRAFTS", payload: snapshotPosts });
       });
   };
 
@@ -49,9 +52,11 @@ const PostsProvider = ({ children }) => {
   }, [user]);
 
   return (
-    <PostsContext.Provider value={{ posts, drafts }}>
-      {children}
-    </PostsContext.Provider>
+    <PostsContextState.Provider value={state}>
+      <PostsContextDispatch.Provider value={dispatch}>
+        {children}
+      </PostsContextDispatch.Provider>
+    </PostsContextState.Provider>
   );
 };
 
