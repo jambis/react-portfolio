@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 
 import PostCard from "./PostCard";
-import { PostsContext } from "../../Providers/PostsProvider";
+import { PostsContextState } from "../../Providers/PostsProvider";
 
 const Blog = () => {
-  const { posts } = useContext(PostsContext);
+  const { posts } = useContext(PostsContextState);
 
   const renderPostCards = () => {
     return posts.map((blog) => {
