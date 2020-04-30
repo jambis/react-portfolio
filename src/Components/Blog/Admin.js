@@ -4,10 +4,13 @@ import { Link } from "react-router-dom";
 import List from "@material-ui/core/List";
 
 import AdminPost from "./AdminPost";
-import { PostsContext } from "../../Providers/PostsProvider";
+import {
+  PostsContextState,
+  PostsContextDispatch,
+} from "../../Providers/PostsProvider";
 
 const Admin = () => {
-  const { posts, drafts } = useContext(PostsContext);
+  const { posts, drafts } = useContext(PostsContextState);
 
   const renderPosts = (article) => {
     return article.map((post) => {

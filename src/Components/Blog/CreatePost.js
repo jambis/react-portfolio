@@ -1,4 +1,10 @@
 import React, { useState } from "react";
+import Button from "@material-ui/core/Button";
+import DeleteRoundedIcon from "@material-ui/icons/DeleteRounded";
+import SaveRoundedIcon from "@material-ui/icons/SaveRounded";
+import PublishRoundedIcon from "@material-ui/icons/PublishRounded";
+import VisibilityRoundedIcon from "@material-ui/icons/VisibilityRounded";
+
 import { firestore } from "../../Utils/firebase";
 
 const CreatePost = (props) => {
@@ -32,12 +38,17 @@ const CreatePost = (props) => {
       content: blogPost.content,
     };
 
-    await firestore.collection("posts").add(newPost);
+    await firestore.collection("drafts").add(newPost);
+  };
+
+  const preview = () => {
+    //Preview item
   };
 
   return (
-    <div>
-      <form>
+    <>
+      <h2>Create A Blog Post</h2>
+      <form className="create-form">
         <label htmlFor="title">Title: </label>
         <input
           name="title"
@@ -53,25 +64,50 @@ const CreatePost = (props) => {
           onChange={handleChange}
         />
         <label htmlFor="content">Content: </label>
-        <input
+        <textarea
           name="content"
-          type="text"
+          type="textarea"
+          cols={20}
+          rows={15}
           value={blogPost.content}
           onChange={handleChange}
         />
-        <label htmlFor="date">Date: </label>
-        <input
-          name="date"
-          type="date"
-          value={blogPost.date}
-          onChange={handleChange}
-        />
-        <button type="button" onClick={publishArticle}>
-          Publish Article
-        </button>
-        <button type="button">Save AS Draft</button>
+        <div className="buttons-container">
+          <Button
+            variant="contained"
+            color="primary"
+            className="primary"
+            startIcon={<SaveRoundedIcon />}
+          >
+            Save As Draft
+          </Button>
+          <Button
+            variant="contained"
+            color="default"
+            className="default"
+            startIcon={<VisibilityRoundedIcon />}
+          >
+            Preview
+          </Button>
+          <Button
+            variant="contained"
+            color="default"
+            className="default"
+            startIcon={<PublishRoundedIcon />}
+          >
+            Publish Article
+          </Button>
+          <Button
+            variant="contained"
+            color="secondary"
+            className="secondary"
+            startIcon={<DeleteRoundedIcon />}
+          >
+            Delete
+          </Button>
+        </div>
       </form>
-    </div>
+    </>
   );
 };
 
