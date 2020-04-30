@@ -2,4 +2,14 @@ export const convertDate = (date) => {
   return null;
 };
 
-export const collectIdsAndData = (doc) => ({ id: doc.id, ...doc.data() });
+export const collectIdsAndDataPosts = (doc) => ({
+  id: doc.id,
+  ...doc.data(),
+  checked: false,
+});
+
+export const collectIdsAndDataDrafts = (doc) => ({
+  id: doc.id,
+  ...doc.data(),
+  checked: false,
+});
