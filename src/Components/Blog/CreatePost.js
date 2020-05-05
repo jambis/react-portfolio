@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import Button from "@material-ui/core/Button";
 import DeleteRoundedIcon from "@material-ui/icons/DeleteRounded";
 import SaveRoundedIcon from "@material-ui/icons/SaveRounded";
@@ -14,6 +15,10 @@ const CreatePost = (props) => {
     slug: "",
   });
 
+  const [editing, setEditing] = useState(false);
+
+  const history = useHistory();
+
   const handleChange = (e) => {
     e.persist();
     setBlogPost((state) => {
@@ -26,6 +31,7 @@ const CreatePost = (props) => {
       title: blogPost.title,
       slug: blogPost.slug,
       content: blogPost.content,
+      published: true,
     };
 
     await firestore.collection("posts").add(newPost);
@@ -36,47 +42,26 @@ const CreatePost = (props) => {
       title: blogPost.title,
       slug: blogPost.slug,
       content: blogPost.content,
+      published: false,
     };
 
     await firestore.collection("drafts").add(newPost);
   };
 
   const preview = () => {
-    //Preview item
+    setEditing((bool) => !bool);
   };
 
-  return (
-    <>
-      <h2>Create A Blog Post</h2>
-      <form className="create-form">
-        <label htmlFor="title">Title: </label>
-        <input
-          name="title"
-          type="text"
-          value={blogPost.title}
-          onChange={handleChange}
-        />
-        <label htmlFor="slug">Slug: </label>
-        <input
-          name="slug"
-          type="text"
-          value={blogPost.slug}
-          onChange={handleChange}
-        />
-        <label htmlFor="content">Content: </label>
-        <textarea
-          name="content"
-          type="textarea"
-          cols={20}
-          rows={15}
-          value={blogPost.content}
-          onChange={handleChange}
-        />
+  const renderPreview = () => {
+    return (
+      <>
+        <div dangerouslySetInnerHTML={{ __html: blogPost.content }} />
         <div className="buttons-container">
           <Button
             variant="contained"
             color="primary"
             className="primary"
+            onClick={saveAsDraft}
             startIcon={<SaveRoundedIcon />}
           >
             Save As Draft
@@ -85,6 +70,7 @@ const CreatePost = (props) => {
             variant="contained"
             color="default"
             className="default"
+            onClick={preview}
             startIcon={<VisibilityRoundedIcon />}
           >
             Preview
@@ -93,6 +79,7 @@ const CreatePost = (props) => {
             variant="contained"
             color="default"
             className="default"
+            onClick={publishArticle}
             startIcon={<PublishRoundedIcon />}
           >
             Publish Article
@@ -106,9 +93,81 @@ const CreatePost = (props) => {
             Delete
           </Button>
         </div>
-      </form>
-    </>
-  );
+      </>
+    );
+  };
+
+  const renderCreate = () => {
+    return (
+      <>
+        <h2>Create A Blog Post</h2>
+        <form className="create-form">
+          <label htmlFor="title">Title: </label>
+          <input
+            name="title"
+            type="text"
+            value={blogPost.title}
+            onChange={handleChange}
+          />
+          <label htmlFor="slug">Slug: </label>
+          <input
+            name="slug"
+            type="text"
+            value={blogPost.slug}
+            onChange={handleChange}
+          />
+          <label htmlFor="content">Content: </label>
+          <textarea
+            name="content"
+            type="textarea"
+            cols={20}
+            rows={15}
+            value={blogPost.content}
+            onChange={handleChange}
+          />
+          <div className="buttons-container">
+            <Button
+              variant="contained"
+              color="primary"
+              className="primary"
+              onClick={saveAsDraft}
+              startIcon={<SaveRoundedIcon />}
+            >
+              Save As Draft
+            </Button>
+            <Button
+              variant="contained"
+              color="default"
+              className="default"
+              onClick={preview}
+              startIcon={<VisibilityRoundedIcon />}
+            >
+              Preview
+            </Button>
+            <Button
+              variant="contained"
+              color="default"
+              className="default"
+              onClick={publishArticle}
+              startIcon={<PublishRoundedIcon />}
+            >
+              Publish Article
+            </Button>
+            <Button
+              variant="contained"
+              color="secondary"
+              className="secondary"
+              startIcon={<DeleteRoundedIcon />}
+            >
+              Delete
+            </Button>
+          </div>
+        </form>
+      </>
+    );
+  };
+
+  return <>{editing ? renderPreview() : renderCreate()}</>;
 };
 
 export default CreatePost;
