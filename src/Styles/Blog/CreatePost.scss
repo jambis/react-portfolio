@@ -1,4 +1,4 @@
-body {
+.Create-Container {
   & form.create-form {
     display: flex;
     flex-direction: column;
@@ -17,37 +17,36 @@ body {
     textarea {
       font-size: 1.3rem;
     }
+  }
+  & .buttons-container {
+    display: flex;
+    justify-content: flex-end;
+    margin: 2% 0;
+    & button {
+      margin-right: 1%;
+    }
+    & button:last-child {
+      margin-right: 0;
+    }
 
-    .buttons-container {
-      display: flex;
-      justify-content: flex-end;
-      margin: 2% 0;
-      & button {
-        margin-right: 1%;
+    & button.primary,
+    button.secondary {
+      & span {
+        color: #fff;
+        font-weight: 600;
       }
-      & button:last-child {
-        margin-right: 0;
+      & svg {
+        fill: #fff;
       }
+    }
 
-      & button.primary,
-      button.secondary {
-        & span {
-          color: #fff;
-          font-weight: 600;
-        }
-        & svg {
-          fill: #fff;
-        }
+    & button.default {
+      & span {
+        color: #222;
+        font-weight: 600;
       }
-
-      & button.default {
-        & span {
-          color: #222;
-          font-weight: 600;
-        }
-        & svg {
-          fill: #222;
-        }
+      & svg {
+        fill: #222;
       }
     }
   }
