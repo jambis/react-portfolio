@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { useHistory } from "react-router-dom";
 import Button from "@material-ui/core/Button";
 import DeleteRoundedIcon from "@material-ui/icons/DeleteRounded";
 import SaveRoundedIcon from "@material-ui/icons/SaveRounded";
 import PublishRoundedIcon from "@material-ui/icons/PublishRounded";
 import VisibilityRoundedIcon from "@material-ui/icons/VisibilityRounded";
+import EditRoundedIcon from "@material-ui/icons/EditRounded";
 
 import { firestore } from "../../Utils/firebase";
 
@@ -16,8 +16,6 @@ const CreatePost = (props) => {
   });
 
   const [editing, setEditing] = useState(false);
-
-  const history = useHistory();
 
   const handleChange = (e) => {
     e.persist();
@@ -71,9 +69,9 @@ const CreatePost = (props) => {
             color="default"
             className="default"
             onClick={preview}
-            startIcon={<VisibilityRoundedIcon />}
+            startIcon={<EditRoundedIcon />}
           >
-            Preview
+            Edit
           </Button>
           <Button
             variant="contained"
@@ -167,7 +165,11 @@ const CreatePost = (props) => {
     );
   };
 
-  return <>{editing ? renderPreview() : renderCreate()}</>;
+  return (
+    <div className="Create-Container">
+      {editing ? renderPreview() : renderCreate()}
+    </div>
+  );
 };
 
 export default CreatePost;
