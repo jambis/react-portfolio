@@ -1,0 +1,53 @@
+.Create-Container {
+  & form.create-form {
+    display: flex;
+    flex-direction: column;
+    & h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 5%;
+    }
+
+    & label {
+      margin-top: 2%;
+    }
+
+    & label,
+    input,
+    textarea {
+      font-size: 1.3rem;
+    }
+  }
+  & .buttons-container {
+    display: flex;
+    justify-content: flex-end;
+    margin: 2% 0;
+    & button {
+      margin-right: 1%;
+    }
+    & button:last-child {
+      margin-right: 0;
+    }
+
+    & button.primary,
+    button.secondary {
+      & span {
+        color: #fff;
+        font-weight: 600;
+      }
+      & svg {
+        fill: #fff;
+      }
+    }
+
+    & button.default {
+      & span {
+        color: #222;
+        font-weight: 600;
+      }
+      & svg {
+        fill: #222;
+      }
+    }
+  }
+}

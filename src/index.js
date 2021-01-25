@@ -3,10 +3,16 @@ import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
+import PostsProvider from "./Providers/PostsProvider";
+import UsersProvider from "./Providers/UsersProvider";
 
 ReactDOM.render(
   <BrowserRouter>
-    <App />
+    <UsersProvider>
+      <PostsProvider>
+        <App />
+      </PostsProvider>
+    </UsersProvider>
   </BrowserRouter>,
   document.getElementById("root")
 );
